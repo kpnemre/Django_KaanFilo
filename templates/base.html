@@ -4,7 +4,7 @@
 ​
 <head>
     <title>
-       KaanFilo- {% block title %}{% endblock %}
+        {% block title %}KaanFilo{% endblock %}
     </title> 
     <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -61,12 +61,13 @@
     {% include 'includes/navbar.html' %}
     
 ​
-    {% block content %}{% endblock content %}
+    {% block content %}
+    {% endblock content %}
 ​
 ​{% include 'includes/footer.html' %}
     <!-- Specific Page JS goes HERE  -->
 
-
+      <a  href="https://api.whatsapp.com/send?phone=306975692639" class="back-to-left"><i class="icofont-brand-whatsapp"></i></a>
       <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
