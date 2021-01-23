@@ -4,13 +4,13 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html"><span>Kaan</span>Filo</a></h1>
+      <h1 class="logo mr-auto"><a href="{% url 'home:home' %}"><span>Kaan</span>Filo</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Anasayfa</a></li>
+          <li class="active"><a href="{% url 'home:home' %}">Anasayfa</a></li>
 
           <li class="drop-down"><a href="">Hakkımızda</a>
             <ul>
@@ -34,27 +34,17 @@
             </ul>
           </li>
 
-          <li class="drop-down"><a href="">Online İşlemler</a>
-            <ul>
-              <li><a href="about.html">Lastik Talebi</a></li>
-              <li><a href="team.html">Periyodik Bakım</a></li>
-            </ul>
-          </li>
-
-          <li class="drop-down"><a href="">Teklif Al</a>
-            <ul>
-              <li><a href="about.html">Uzun Dönem Kiralama</a></li>
-              <li><a href="team.html">Kısa Dönem Kiralama</a></li>
-            </ul>
-          </li>
+     
 
 
 
-          <!-- <li><a href="services.html">Services</a></li> -->
+
+
+          <li><a href="{% url 'home:offer' %}">Teklif Al</a></li>
           <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
           <!-- <li><a href="pricing.html">Teklif Al</a></li> -->
           <!-- <li><a href="blog.html">Blog</a></li> -->
-          <li><a href="contact.html">İletişim</a></li>
+          <li><a href="{% url 'home:contact' %}">İletişim</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->

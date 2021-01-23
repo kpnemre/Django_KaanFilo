@@ -8,15 +8,20 @@
     <div class="carousel-inner" role="listbox">
       {% for slider in sliders %}
       <!-- Slide 1 -->
-      <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}" id="slide{{ forloop.counter }}" style="background-image:url({{slider.image.url}}) ;">
+      <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}" id="slide{{ forloop.counter }}" style="background-image:url({{slider.image.url}}); ">
         <!-- <img src="{{slider.image.url}}" class="d-block w-100 img-fluid" alt=""> -->
         
-        <div class="carousel-container">
+        <!-- <div class="carousel-container">
           <div class="carousel-content animate__animated animate__fadeInUp">
             <h2>{{slider.title}}</h2>
             <p>{{slider.content}}</p>
             <div class="text-center"><a href="" class="btn-get-started">Daha Fazlası</a></div>
           </div>
+        </div> -->
+
+        <div class="carousel-caption d-sm-flex d-md-block">
+          <h3>{{slider.title}}</h3>
+          <p>{{slider.content}}</p>
         </div>
       </div>
   
@@ -53,11 +58,11 @@
   <main id="main">
 
     <!-- ======= About Us Section ======= -->
-    <section id="about-us" class="about-us">
+    <section id="about" class="about-us">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>About Us</strong></h2>
+          <h2>Hakkımızda</strong></h2>
         </div>
 
         <div class="row content">
@@ -91,7 +96,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Services</strong></h2>
+          <h2>Hizmetlerimiz</strong></h2>
           <p>Laborum repudiandae omnis voluptatum consequatur mollitia ea est voluptas ut</p>
         </div>
 

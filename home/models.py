@@ -38,6 +38,15 @@ class Blog(models.Model):
     slug = models.SlugField(editable = False)
     active = models.BooleanField("Sitede gösterilsin mi?", default = False)
     about = models.BooleanField("Neden Kiralama Başlığı için tıklayınız", default = False)
+    facebook_url = models.URLField(blank=True)
+    twitter_url = models.URLField(blank=True)
+    instagram_url = models.URLField(blank=True)
+    skype_url = models.URLField(blank=True)
+    linkedin_url = models.URLField(blank=True)
+    copyright_name = models.CharField(max_length=50, default="KaanFilo")
+    adress = models.CharField(max_length=75, default="KaanFilo")
+    email = models.EmailField(max_length=50, default="KaanFilo")
+    phone = models.CharField(max_length=20, default="KaanFilo")
 
     class Meta:
         verbose_name = 'Blog'
@@ -52,5 +61,40 @@ class Blog(models.Model):
 
     def get_absolute_url(self):
         return reverse('home:detail', kwargs={'slug':self.slug})
+
+
+class Offer(models.Model):
+    name = models.CharField("İsim Soy:", max_length = 30)
+    surname = models.CharField("Soyad:", max_length = 30)
+    company = models.CharField("Firma:", max_length = 70)
+    email = models.EmailField("Eposta adresi:")
+    number = models.SmallIntegerField("Telefon Numaranız:")
+    city = models.CharField("Şehir", max_length = 30)
+    number_of_car = models.SmallIntegerField("Kiralanacak Araç Sayısı:")
+    renting_time = models.SmallIntegerField("Kiralanacak Gün Sayısı:")
+    message = models.TextField("Mesajınız:")
+
+    class Meta:
+        verbose_name = 'Teklif'
+        verbose_name_plural = 'Teklifler'
+    
+    def __str__(self):
+        return self.name
+
+
+class ContactInfo(models.Model):
+    name = models.CharField("İsminiz:", max_length=40)
+    email = models.EmailField("Email:")
+    topic = models.CharField("Konu:", max_length = 150)
+    content = models.TextField("Mesajınız:")
+
+    class Meta:
+        #ordering = ('sıralama_sayısı', )
+        verbose_name = 'Gelen Mesaj'
+        verbose_name_plural = 'Gelen Mesajlar'
+
+    def __str__(self):
+        return self.name
+    
 
                                                                                                                                                                                                                                                                                 
