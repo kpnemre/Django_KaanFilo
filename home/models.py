@@ -38,19 +38,12 @@ class Blog(models.Model):
     slug = models.SlugField(editable = False)
     active = models.BooleanField("Sitede gösterilsin mi?", default = False)
     about = models.BooleanField("Neden Kiralama Başlığı için tıklayınız", default = False)
-    facebook_url = models.URLField(blank=True)
-    twitter_url = models.URLField(blank=True)
-    instagram_url = models.URLField(blank=True)
-    skype_url = models.URLField(blank=True)
-    linkedin_url = models.URLField(blank=True)
-    copyright_name = models.CharField(max_length=50, default="KaanFilo")
-    adress = models.CharField(max_length=75, default="KaanFilo")
-    email = models.EmailField(max_length=50, default="KaanFilo")
-    phone = models.CharField(max_length=20, default="KaanFilo")
+    sıralama = models.SmallIntegerField(default = 0)
 
     class Meta:
         verbose_name = 'Blog'
         verbose_name_plural = 'Bloglar'
+        ordering = ['sıralama']
     
     def __str__(self):
         return self.title
@@ -95,6 +88,26 @@ class ContactInfo(models.Model):
 
     def __str__(self):
         return self.name
-    
+
+class Setting(models.Model):
+    title = models.CharField("title", max_length=50)
+    description = models.CharField("Google'da çıkacak olan yazı", max_length=150)
+    keywords = models.CharField("Google'da aramalarda çıkabilmek için gerekli anahtar kelimler", max_length=150)   
+    facebook_url = models.URLField(blank=True)
+    twitter_url = models.URLField(blank=True)
+    instagram_url = models.URLField(blank=True)
+    linkedin_url = models.URLField(blank=True)
+    copyright_name = models.CharField(max_length=50, default="KaanFilo")
+    adress = models.CharField(max_length=75)
+    email = models.EmailField()
+    phone = models.CharField(max_length=20)
+
+
+    class Meta:
+        verbose_name = 'Ayar'
+        verbose_name_plural = 'Ayarlar'
+    def __str__(self):
+        return self.title
+
 
                                                                                                                                                                                                                                                                                 

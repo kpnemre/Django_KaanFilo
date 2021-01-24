@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Slider, Blog, Offer, ContactInfo
+from .models import Slider, Blog, Offer, ContactInfo, Setting
 
 # Register your models here.
 class SliderAdmin(admin.ModelAdmin):
@@ -19,8 +19,13 @@ class OfferAdmin(admin.ModelAdmin):
 class ContactAdmin(admin.ModelAdmin):
 		
 	list_display = ["name"]
+ 
+class SettingAdmin(admin.ModelAdmin):
+		
+	list_display = ["title","description","keywords","facebook_url","twitter_url","instagram_url","linkedin_url","copyright_name","adress","email","phone"]
 
 admin.site.register(ContactInfo, ContactAdmin)
 admin.site.register(Slider, SliderAdmin)
 admin.site.register(Blog, BlogAdmin)
 admin.site.register(Offer, OfferAdmin)
+admin.site.register(Setting, SettingAdmin)
