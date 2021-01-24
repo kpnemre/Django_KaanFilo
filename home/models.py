@@ -31,19 +31,29 @@ class Slider(models.Model):
         #return reverse('home:detail', kwargs={'slug':self.slug})
 
 class Blog(models.Model):
+    FEATURE_FONTS = (
+        ("icofont-auto-mobile", "araba"),
+        ("icofont-automation", "hizmetler"),
+        ("icofont-bullseye", "avantaj"),
+        ("ri-store-line", "dükkan"),
+    )
+
+    font_title = models.CharField("Font Başlık", max_length=50)
+    font = models.CharField(max_length=50, choices=FEATURE_FONTS)
     title = models.CharField("Başlık", max_length=100, unique = True)
+    sub_content = models.CharField("Kısa İçerik", max_length=100)
     image = models.ImageField("Resim", blank=True,null=True)
     created_date = models.DateTimeField("Oluşturma zamanı", auto_now_add=True)
     content= RichTextField("İçerik")
     slug = models.SlugField(editable = False)
     active = models.BooleanField("Sitede gösterilsin mi?", default = False)
     about = models.BooleanField("Neden Kiralama Başlığı için tıklayınız", default = False)
-    sıralama = models.SmallIntegerField(default = 0)
+    # sıralama = models.SmallIntegerField(default = 0)
 
     class Meta:
         verbose_name = 'Blog'
         verbose_name_plural = 'Bloglar'
-        ordering = ['sıralama']
+        # ordering = ['sıralama']
     
     def __str__(self):
         return self.title
@@ -101,6 +111,12 @@ class Setting(models.Model):
     adress = models.CharField(max_length=75)
     email = models.EmailField()
     phone = models.CharField(max_length=20)
+    phone2 = models.CharField(max_length=20)
+    image = models.ImageField("Hakkımızda kısmı için resim", blank=True, null=True)
+    content = models.TextField("Hakkımızda kısmı için içerik:")
+
+    
+
 
 
     class Meta:
@@ -108,6 +124,16 @@ class Setting(models.Model):
         verbose_name_plural = 'Ayarlar'
     def __str__(self):
         return self.title
+
+
+class Car(models.Model):
+    name = models.CharField("Arabanın ismi", max_length = 50)
+    image = models.ImageField("Resim", blank=True, null=True)
+    price = models.SmallIntegerField("Fiyat", default = 0)
+
+    def __str__(self):
+        return self.name
+
 
 
                                                                                                                                                                                                                                                                                 

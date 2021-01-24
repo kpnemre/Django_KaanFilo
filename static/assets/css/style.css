@@ -45,8 +45,8 @@ h1, h2, h3, h4, h5, h6 {
 .back-to-left {
   position: fixed;
   /* display: none; */
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 3px;
   left: 15px;
   bottom: 15px;
@@ -58,10 +58,10 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .back-to-left i {
-  font-size: 24px;
+  font-size: 28px;
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 12px;
+  left: 12px;
 }
 
 .back-to-left:hover {
@@ -854,12 +854,14 @@ section {
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
-
+.portfolio-info {
+  width: 18rem;
+}
 .portfolio .portfolio-item .portfolio-info {
   opacity: 0;
   position: absolute;
-  left: 30px;
-  right: 30px;
+  left: 10px;
+  right: 10px;
   bottom: 0;
   z-index: 3;
   transition: all ease-in-out 0.3s;
