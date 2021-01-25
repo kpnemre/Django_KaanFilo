@@ -112,6 +112,7 @@ class Setting(models.Model):
     email = models.EmailField()
     phone = models.CharField(max_length=20)
     phone2 = models.CharField(max_length=20)
+    whatsapp_phone = models.CharField(max_length=20)
     image = models.ImageField("Hakkımızda kısmı için resim", blank=True, null=True)
     content = models.TextField("Hakkımızda kısmı için içerik:")
 
