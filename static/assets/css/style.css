@@ -396,55 +396,6 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
 }
 
-#hero .carousel-container {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  position: absolute;
-  bottom: 60px;
-  top: 70px;
-  left: 55px;
-  right: 55px;
-}
-
-#hero .carousel-content {
-  background: rgba(4, 4, 4, 0.7);
-  padding: 20px;
-  color: #fff;
-  -webkit-animation-duration: .5s;
-  animation-duration: .5s;
-  border-top: 5px solid red;
-}
-
-#hero .carousel-content h2 {
-  color: #fff;
-  margin-bottom: 20px;
-  font-size: 28px;
-  font-weight: 700;
-}
-
-#hero .btn-get-started {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 32px;
-  border-radius: 4px;
-  transition: 0.5s;
-  line-height: 1;
-  margin: 10px;
-  color: #fff;
-  -webkit-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-  border: 2px solid red;
-}
-
-#hero .btn-get-started:hover {
-  background: red;
-  color: #fff;
-  text-decoration: none;
-}
 
 #hero .carousel-inner .carousel-item {
   transition-property: opacity;
@@ -513,27 +464,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (min-width: 1024px) {
-  #hero .carousel-content {
-    width: 60%;
-  }
+
   #hero .carousel-control-prev, #hero .carousel-control-next {
     width: 5%;
   }
 }
 
 @media (max-width: 992px) {
-  #hero .carousel-container {
+  /* #hero .carousel-container {
     top: 58px;
-  }
-  #hero .carousel-content h2 {
+  } */
+  /* #hero .carousel-content h2 {
     margin-bottom: 15px;
     font-size: 22px;
   }
   #hero .carousel-content p {
     font-size: 15px;
-  }
+  } */
   #hero .carousel-item {
-    background-size: 600px 300px;
+    background-size: 100% 100%;
     /* background-position: center; */
     background-repeat: no-repeat;
   }
@@ -555,7 +504,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   #hero {
     width: 100%;
-    height: 38vh;
+    height: 40vh;
     background-color: rgba(0, 0, 0, 0.8);
     overflow: hidden;
     position: relative;
@@ -565,19 +514,9 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-height: 500px) {
   #hero .carousel-item {
-    background-size: 500px 250px;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
-  }
-  #hero .carousel-container {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    position: absolute;
-    bottom: 3px;
-    top: 3px;
-    left: 2px;
-    right: 2px;
   }
   #hero .carousel-caption {
     bottom: 0px;
@@ -587,7 +526,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   #hero {
     width: 100%;
-    height: 68vh;
+    height: 60vh;
   }
 }
 
@@ -822,26 +761,6 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-.portfolio #portfolio-flters {
-  padding: 0;
-  margin: 0 auto 50px auto;
-  list-style: none;
-  text-align: center;
-}
-
-.portfolio #portfolio-flters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 8px 20px 10px 20px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #4d4643;
-  transition: all 0.3s;
-  border-radius: 4px;
-}
-
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
   color: #fff;
   background: red;
@@ -852,7 +771,9 @@ section {
 }
 
 .portfolio .portfolio-item {
-  margin-bottom: 30px;
+
+  margin-bottom:1rem ;
+  margin-top: 1rem;
 }
 .portfolio-info {
   width: 18rem;
@@ -925,38 +846,7 @@ section {
   bottom: 20px;
 }
 
-/*--------------------------------------------------------------
-# Clients
---------------------------------------------------------------*/
-.clients .clients-wrap {
-  border-top: 1px solid #ececec;
-  border-left: 1px solid #ececec;
-}
 
-.clients .client-logo {
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-right: 1px solid #ececec;
-  border-bottom: 1px solid #ececec;
-  overflow: hidden;
-  background: #fff;
-  height: 100px;
-}
-
-.clients .client-logo img {
-  transition: all 0.3s ease-in-out;
-  height: 36px;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
-
-.clients .client-logo:hover img {
-  -webkit-filter: none;
-  filter: none;
-  transform: scale(1.1);
-}
 
 /*--------------------------------------------------------------
 # About Us
