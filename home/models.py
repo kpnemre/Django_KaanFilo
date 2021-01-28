@@ -115,6 +115,8 @@ class Setting(models.Model):
     whatsapp_phone = models.CharField(max_length=20)
     image = models.ImageField("Hakkımızda kısmı için resim", blank=True, null=True)
     content = models.TextField("Hakkımızda kısmı için içerik:")
+    favicon = models.ImageField("Favicon resim", blank=True, null=True)
+    
 
     
 

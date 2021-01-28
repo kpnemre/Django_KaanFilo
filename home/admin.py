@@ -22,7 +22,7 @@ class ContactAdmin(admin.ModelAdmin):
  
 class SettingAdmin(admin.ModelAdmin):
 		
-	list_display = ["title","description","keywords","facebook_url","twitter_url","instagram_url","linkedin_url","copyright_name","adress","email","phone", "phone2"]
+	list_display = ["title","description","keywords","facebook_url","twitter_url","instagram_url","linkedin_url","copyright_name","adress","email","phone", "phone2","favicon"]
 
 class CarAdmin(admin.ModelAdmin):
 		
