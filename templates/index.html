@@ -134,17 +134,27 @@
         <div class="row portfolio-container" data-aos="fade-up">
 {% for car  in cars %}
   
+<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img class="card-img-top" src="{{car.image.url}}" alt="Card image cap">
+  <div class="card-body">
+    <h4>{{car.name}}</h4>
+    <p class="card-text">{{car.price}}</p>
+    <!-- <a href="{{car.image.url}}" data-gall="portfolioGallery" class="venobox preview-link" title="Araçlarımız"><i class="bx bx-plus"></i></a> -->
 
-  
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="{{car.image.url}}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>{{car.name}}</h4>
-              <p>{{car.price}}</p>
-              <a href="{{car.image.url}}" data-gall="portfolioGallery" class="venobox preview-link" title="Araçlarımız"><i class="bx bx-plus"></i></a>
-              <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
-            </div>
-          </div>
+  </div>
+</div>
+
+
+<!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+  <img src="{{car.image.url}}" class="img-fluid" alt="">
+  <div class="portfolio-info">
+    <h4>{{car.name}}</h4>
+    <p>{{car.price}}</p>
+    <a href="{{car.image.url}}" data-gall="portfolioGallery" class="venobox preview-link" title="Araçlarımız"><i class="bx bx-plus"></i></a>
+  </div>
+</div> -->
+
+
           {% endfor %}
 
 
