@@ -1,17 +1,16 @@
-=
-
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
+    <div class="container d-flex">
 
-      <h1 class="logo mr-auto"><a href="{% url 'home:home' %}"><span>Kaan</span> Filo</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="{% url 'home:home' %}"><span>Kaan</span> Filo Kiralama</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <!-- <li class="{{active}}"><a href="{% url 'home:home' %}">Anasayfa</a></li> -->
-
+          <li class="active"><a href="#header"></a></li>
           <li class="drop-down"><a href="{% url 'home:home' %}#about">Hakkımızda</a>
             <ul>
               
@@ -23,7 +22,7 @@
             
             </ul>
           </li>
-
+          <li><a href="{% url 'home:offer' %}">Teklif Al</a></li>
           <li class="drop-down"><a href="{% url 'home:home' %}#services">Hizmetlerimiz</a>
             <ul>
               {% for renting in rentings  %}
@@ -32,31 +31,12 @@
               {% endfor %}
 
             </ul>
-          </li>
-
-     
-
-
-
-
-
-          <li><a href="{% url 'home:offer' %}">Teklif Al</a></li>
-          <!-- <li><a href="{% url 'home:home' %}#">2.EL</a></li> -->
-          <li><a href="{% url 'home:home' %}#portfolio">Araçlarımız</a></li>
-          <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
-          <!-- <li><a href="pricing.html">Teklif Al</a></li> -->
-          <!-- <li><a href="blog.html">Blog</a></li> -->
-          <li><a href="{% url 'home:contact' %}">İletişim</a></li>
+          </li>            <li><a href="{% url 'home:home' %}#portfolio">Araçlarımız1</a></li>
+            <li><a href="{% url 'home:home' %}#portfolio">Araçlarımız2</a></li>
+          <li><a href="{% url 'home:home' %}#contact">İletişim</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
-
-      <div class="header-social-links">
-        <a href="{{setting.instagram_url}}" class="instagram"><i class="icofont-instagram"></i></a>
-        <a href="{{setting.twitter_url}}" class="twitter"><i class="icofont-twitter"></i></a>
-        <a href="{{setting.facebook_url}}" class="facebook"><i class="icofont-facebook"></i></a>
-        <a href="{{setting.linkedin_url}}" class="linkedin"><i class="icofont-linkedin"></i></i></a>
-      </div>
 
     </div>
   </header><!-- End Header -->

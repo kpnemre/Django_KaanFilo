@@ -11,12 +11,22 @@ def home(request):
     rentings = Blog.objects.filter(active = True, about = True)
     setting= Setting.objects.first()
     cars = Car.objects.all()
+    if request.method == 'POST':
+        print(request.POST)
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Başarı bir şekilde mesajınız tarafımıza iletilmiştir. En kısa sürede sizinle iletişime geçilecektir.')
+            return redirect("home:home")
+    else:
+        form = ContactForm()
 
     
     # print(sliders)
     # print(first_slider)
     
     context = {
+        "form": form,
         "sliders": sliders,
         "abouts": abouts,
         "rentings": rentings,
