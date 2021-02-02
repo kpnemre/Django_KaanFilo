@@ -136,9 +136,9 @@ body {
 .back-to-left {
   position: fixed;
   /* display: none; */
-  width: 50px;
-  height: 50px;
-  border-radius: 3px;
+  width: 70px;
+  height: 70px;
+  border-radius: 5rem;
   left: 15px;
   bottom: 15px;
   background: green;
@@ -148,10 +148,11 @@ body {
 }
 
 .back-to-left i {
-  font-size: 28px;
+  font-size: 3rem;
   position: absolute;
-  top: 12px;
-  left: 12px;
+
+  top: 13px;
+  left: 13px;
 }
 
 .back-to-left:hover {
