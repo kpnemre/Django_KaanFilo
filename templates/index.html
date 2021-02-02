@@ -13,7 +13,7 @@
       <div id="ensign-nivoslider" class="slides">
         
         {% for slider in sliders %}
-        <img src="{{slider.image.url}}" alt="" title="#slider-direction-{{forloop.counter}}" />
+        <img src="{{slider.image.url}}" alt="{{slider.title}}" title="#slider-direction-{{forloop.counter}}" />
         {% endfor %}
           
        
