@@ -59,7 +59,8 @@ class Blog(models.Model):
         return self.title
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
+        baslik = slugify(self.title.replace("ı", "i").replace("I", "i").lower())
+        self.slug = baslik
         super(Blog, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
