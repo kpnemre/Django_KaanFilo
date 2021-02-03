@@ -8,10 +8,11 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Kaan Filo</title>
+  {% block metalar %}
   <meta content="{{setting.description}}" name="description">
   <meta content="{{setting.keywords}}" name="keywords">
+  {% endblock %}
   <meta name="robots" content="noindex">
-
 
   <!-- Favicons -->
   <link href="{{setting.favicon.url}}" rel="icon">

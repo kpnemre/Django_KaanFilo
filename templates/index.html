@@ -3,10 +3,8 @@
 {% load crispy_forms_tags %}
 
 
+
 {% block content %}
-
-
-
   <!-- ======= Slider Section ======= -->
   <div id="home" class="slider-area">
     <div class="bend niceties preview-2">
@@ -14,6 +12,7 @@
         
         {% for slider in sliders %}
         <img src="{{slider.image.url}}" alt="{{slider.title}}" title="#slider-direction-{{forloop.counter}}" />
+        <img data-src="{{slider.image.url}}" alt="{{slider.title}}" title="#slider-direction-{{forloop.counter}}" />
         {% endfor %}
           
        
@@ -331,7 +330,6 @@
 
 
   {% endblock content %}
-
 
 
 

@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
+
+{% block metalar%}
+<meta content="{{blog.description}}" name="description">
+<meta content="{{blog.keywords}}" name="keywords">
+{% endblock %}
+
 {% block content %}
   <main id="main">
 

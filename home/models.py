@@ -48,8 +48,8 @@ class Blog(models.Model):
     slug = models.SlugField(editable = False)
     active = models.BooleanField("Sitede gösterilsin mi?", default = False)
     about = models.BooleanField("Neden Kiralama Başlığı için tıklayınız", default = False)
-    # sıralama = models.SmallIntegerField(default = 0)
-
+    description = models.CharField("Google'da çıkacak olan yazı", max_length=150, default ="Kaanfilo")
+    keywords = models.CharField("Google'da aramalarda çıkabilmek için gerekli anahtar kelimler", max_length=150, default = "Kaan Filo, araç kiralama")  
     class Meta:
         verbose_name = 'Blog'
         verbose_name_plural = 'Bloglar'

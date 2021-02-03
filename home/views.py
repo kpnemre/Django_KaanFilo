@@ -80,30 +80,7 @@ def offer(request):
     return render(request, "forms/offer.html", context)
 
 
-def contact(request):
-    abouts = Blog.objects.filter(active = True, about = False)
-    rentings = Blog.objects.filter(active = True, about = True)
-    setting= Setting.objects.first()
-    # print(setting)
-    if request.method == 'POST':
-        print(request.POST)
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Başarı bir şekilde mesajınız tarafımıza iletilmiştir. En kısa sürede sizinle iletişime geçilecektir.')
-            return redirect("home:contact")
-    else:
-        form = ContactForm()
-    
-    context = {
-        "form": form,
-        "abouts": abouts,
-        "rentings": rentings,
-        "setting":setting,
-        #"active_contact": "active"
-    }
 
-    return render(request, "contact.html", context)
 
 
 # def footer(request):
