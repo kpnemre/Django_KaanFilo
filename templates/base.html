@@ -70,8 +70,13 @@
     <script src="{% static 'assets/vendor/nivo-slider/js/jquery.nivo.slider.js' %}"></script>
     <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
     <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+    <script src="{% static 'https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js' %}"></script>
   
     <!-- Template Main JS File -->
     <script src="{% static  'assets/js/main.js' %}"></script>
+    <script>
+      const observer = lozad();
+      observer.observe();
+    </script>
 </body>
 </html>

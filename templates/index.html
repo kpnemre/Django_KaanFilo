@@ -11,7 +11,7 @@
       <div id="ensign-nivoslider" class="slides">
         
         {% for slider in sliders %}
-        <img  data-src="{{slider.image.url}}" data-thumb="{{slider.image.url}}" src= "{{slider.image.url}}" alt="{{slider.title}}" title="#slider-direction-{{forloop.counter}}" />
+        <img class="lozad" src = "{{slider.image.url}}" data-src="{{slider.image.url}}" alt="{{slider.title}}" title="#slider-direction-{{forloop.counter}}" />
         {% endfor %}
           
        
@@ -329,8 +329,3 @@
 
   {% endblock content %}
 
-  <script type="text/javascript">
-    $(window).load(function() {
-        $('#ensign-nivoslider').nivoSlider();
-    });
-    </script>
