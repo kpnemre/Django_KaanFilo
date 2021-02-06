@@ -34,6 +34,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('robots.txt/', TemplateView.as_view(template_name="robots.txt", content_type ="text/plain")),   
+    path('google42bbd82ce6dc94c4.html/', TemplateView.as_view(template_name="google42bbd82ce6dc94c4.html", content_type ="text/plain")),   
     path('sitemap.xml/', sitemap, {'sitemaps':sitemaps}),
 ]
 
