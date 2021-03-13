@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
-    'home',
+    'home.apps.HomeConfig',
     'crispy_forms',
     'ckeditor',
 
@@ -110,6 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
 LANGUAGE_CODE = 'tr'
+
 
 TIME_ZONE = 'Europe/Istanbul'
 

@@ -117,7 +117,7 @@ class Setting(models.Model):
     image = models.ImageField("Hakkımızda kısmı için resim", blank=True, null=True)
     content = models.TextField("Hakkımızda kısmı için içerik:")
     favicon = models.ImageField("Favicon resim", blank=True, null=True)
-    
+    googleMap= models.CharField("Googlemap iframe", blank=True, null=True, max_length=200)
 
     
 
